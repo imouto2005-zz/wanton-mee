@@ -12,13 +12,21 @@
 	display: none;
 }
 
-#form {
+#menu {
 	margin-top: 20px;
 	display: none;
 }
 
 h1, h2 {
-	font-family: "Unica One";
+	font-family: "Raleway";
+}
+
+h2 {
+	font-size: 20px !important;
+}
+
+i {
+	vertical-align: bottom !important;
 }
 
 .biz-details {
@@ -31,10 +39,25 @@ h1, h2 {
 }
 
 #edit-info {
-	margin-left: 68%;
+	margin-left: 67%;
 }
 
 input {
 	width: 500px !important;
 }
 
+.card-title {
+	font-weight: bold !important;
+	font-family: "Raleway";
+	text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+
+}
+
+#edit-butan {
+	margin-left: 130px !important;
+	font-size: 15px !important;
+}
+
+#edit-butan:hover {
+	color: #2979ff ;
+}

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 	<link href="style.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 	<div class="toggle-buttons">
 		<button class="waves-effect waves-light btn pink lighten-3" onclick="showIncoming()">Incoming</button>
 		<button class="waves-effect waves-light btn" onclick="showResolved()">Resolved</button>
-		<button class="waves-effect waves-light btn cyan lighten-2" id="edit-info" onclick="showForm()">Edit Info</button>
+		<button class="waves-effect waves-light btn cyan lighten-2" id="edit-info" onclick="showForm()">Edit Menu</button>
 	</div>
 
 	<div id="incoming">
@@ -108,15 +108,113 @@
 		</table>
 	</div>
 
-	<div id="form">
-		<form>
-        <input autofocus type="text" placeholder="Address"><br>
-         <input type="text" placeholder="Phone"><br>
-		<input type="text" placeholder="Email">
-    </form>	
-    <a class="waves-effect waves-light btn cyan lighten-2">submit</a>
+	<div id="menu">
+		<div class="row">
+      <div class="col s6" id="left-menu">
+      	<h2>Menu Items</h2>
 
-	</div>
+      	<div class="row">
+
+      	<!-- START OF CARD -->
+
+        <div class="col s6">
+          <div class="card">
+            <div class="card-image">
+              <img src="http://danielfooddiary.com/wp-content/uploads/2012/04/namseng1.jpg">
+              <span class="card-title">Wanton Mee</span>
+            </div>
+            <div class="card-content">
+              <p>Chef MeeMee's signature dish. Winner of the prestigious High Class Wanton Mee Festival.<br>
+              <i class="material-icons">local_atm</i> $6 
+				<span id="edit-butan"><i class="material-icons">mode_edit</i>Edit</span>
+              </p> 
+
+            </div>
+          </div>
+        </div>
+
+        <!-- END OF CARD -->
+
+        	<!-- START OF CARD -->
+
+        <div class="col s6">
+          <div class="card">
+            <div class="card-image">
+              <img src="http://www.blogchef.net/wp-content/uploads/2014/09/wonton_soup_2.jpg">
+              <span class="card-title">Wanton Soup</span>
+            </div>
+            <div class="card-content">
+              <p>Like wanton mee, but without the noodles and with soup.<br>
+              <i class="material-icons">local_atm</i> $8
+              				<span id="edit-butan"><i class="material-icons">mode_edit</i>Edit</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END OF CARD -->
+        </div>
+        <div class="row">
+
+            	<!-- START OF CARD -->
+
+        <div class="col s6">
+          <div class="card">
+            <div class="card-image">
+              <img src="http://1.bp.blogspot.com/_CdF_nh1tEpw/SPtOVtuxkII/AAAAAAAAExw/48JbGy1O8Iw/w1200-h630-p-k-no-nu/cooking+baking+201+220-a.JPG">
+              <span class="card-title">Fried Wantons</span>
+            </div>
+            <div class="card-content">
+              <p>Everything tastes better when they've been fried.<br>
+              <i class="material-icons">local_atm</i> $4
+              				<span id="edit-butan"><i class="material-icons">mode_edit</i>Edit</span>
+
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END OF CARD -->
+
+              	<!-- START OF CARD -->
+
+        <div class="col s6">
+          <div class="card">
+            <div class="card-image">
+              <img src="http://americanrepertorytheater.org/sites/default/files/styles/page_image/public/pageimages/Spaghetti.jpg?itok=6u48RkCF">
+              <span class="card-title">Plain Noodles</span>
+            </div>
+            <div class="card-content">
+              <p>For vegetarians. But what are you doing in a Wanton Mee shop?!<br>
+              <i class="material-icons">local_atm</i> $2
+              				<span id="edit-butan"><i class="material-icons">mode_edit</i>Edit</span>
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END OF CARD -->
+
+
+      </div>
+            
+
+      </div>
+      <div class="col s6" id="right-menu">
+      	<h2>Add a new item</h2>
+      	<form>
+      		<input type="text" placeholder="Item name (required)" autofocus="autofocus"><br>
+      		<input type="number" placeholder="Price (required)"><br>
+      		<input type="text" placeholder="Description"><br>
+      		<input type="text" placeholder="Image url"><br>
+      		<a class="waves-effect waves-light btn light-blue lighten-2">submit</a>
+      	</form>
+      </div>
+    </div> <!-- for row -->
+
+	</div> <!-- for menu class -->
 
 	</div>
 
