@@ -1,7 +1,16 @@
+.brand-logo {
+	margin-left: 10px;
+	font-family: "Raleway";
+}
+
 .body {
 	width: 90%;
 	margin: 0 auto;
 	margin-top: 20px;
+}
+
+#analytics {
+	display: none;
 }
 
 #incoming {
@@ -27,6 +36,29 @@ h2 {
 
 i {
 	vertical-align: bottom !important;
+}
+
+th {
+	text-align: center !important;
+}
+
+#leaderboard {
+	width: 80%;
+}
+
+#date {
+	width: 150px !important;
+}
+
+.total-earnings, .chart {
+	width: 80%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding-left: 15px;
+}
+
+.chart {
+	margin-top: 10px;
 }
 
 .biz-details {
@@ -61,3 +93,5 @@ input {
 #edit-butan:hover {
 	color: #2979ff ;
 }
+
+

@@ -5,36 +5,125 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 	<link href="style.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 </head>
 <body>
+<nav>
+    <div class="nav-wrapper red accent-4">
+      <a href="#" class="brand-logo">Huddle</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a onclick="showAnalytics()">Analytics</a></li>
+        <li><a onclick="showOrders()">Orders</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
 <div class="body">
+
 	<h1>My Wanton Mee</h1>
 
-	<div class="biz-details">
-		<p>
-		<i class="material-icons" style="font-size:16px">location_on</i> 73A Ayer Rajah Crescent, S(123456) <br>
-		<i class="material-icons" style="font-size:16px">phone</i> +65 6843 4652 <br>
-		<i class="material-icons" style="font-size:16px">email</i> bestwantonmee555@wantonme.com
-		</p>
+<!-- 	===== ANALYTICS =====    -->
+
+	<div id="analytics">
+		<h2 style="margin-bottom: 0; font-weight: bold;">Select Month:</h2>
+
+		<div class="input-field col s12">
+		<select name="Month">
+			<option value="jan">January</option>
+			<option value="feb">February</option>
+			<option value="mar">March</option>
+			<option value="apr">April</option>
+			<option value="may">May</option>
+			<option value="jun">June</option>
+			<option value="jul">July</option>
+			<option value="aug">August</option>
+			<option value="sep">September</option>
+			<option value="oct">October</option>
+			<option value="nov">November</option>
+			<option value="dec">December</option>
+		</select>
+		</div>
+
+
+		<div class="row">
+			<div class="col s6" id="analytics-left">
+				<h2>Leaderboard</h2>
+				<table class="striped centered" id="leaderboard">
+					<tr>
+						<th>Rank</th>
+						<th>Item Name</th>
+						<th>Units Sold</th>
+						<th>Earnings</th>
+					</tr>
+
+					<tr>
+						<td>1</td>
+						<td>Wanton Mee</td>
+						<td>8888</td>
+						<td>$53,328</td>
+					</tr>
+
+					<tr>
+						<td>2</td>
+						<td>Fried Wantons</td>
+						<td>5368</td>
+						<td>$21,472</td>
+					</tr>
+
+					<tr>
+						<td>3</td>
+						<td>Wanton Soup</td>
+						<td>3500</td>
+						<td>$28,000</td>
+					</tr>
+
+					<tr>
+						<td>4</td>
+						<td>Plain Noodles</td>
+						<td>180</td>
+						<td>$360</td>
+					</tr>
+
+				</table>
+			</div>
+
+      		<div class="col s6" id="analytics-right">
+      			<div class="total-earnings">
+      				<h2 style="text-align: center;"><i class="em em-moneybag"></i><i class="em em-moneybag"></i><i class="em em-moneybag"></i>Total Earnings<i class="em em-moneybag"></i><i class="em em-moneybag"></i><i class="em em-moneybag"></i></h2>
+      				<h1 style="text-align: center;">$103,160</h1>
+      			</div>
+
+      			<div class="chart">
+      			<h2>No. of customers in the month of January</h2>
+      			<img src="http://i.imgur.com/2zxtxWt.png" alt="users" width="100%">
+      			</div>
+      		</div>
+		</div> <!-- div for row -->
 	</div>
 
+<!-- 	===== ANALYTICS =====    -->
+
+
+<!-- 	===== ORDERS =====    -->
+<div id="orders">
 	<div class="toggle-buttons">
-		<button class="waves-effect waves-light btn pink lighten-3" onclick="showIncoming()">Incoming</button>
-		<button class="waves-effect waves-light btn" onclick="showResolved()">Resolved</button>
-		<button class="waves-effect waves-light btn cyan lighten-2" id="edit-info" onclick="showForm()">Edit Menu</button>
+		<button class="waves-effect waves-light btn red accent-2" onclick="showIncoming()">Incoming</button>
+		<button class="waves-effect waves-light btn red darken-1" onclick="showResolved()">Resolved</button>
+		<button class="waves-effect waves-light btn blue accent-2" id="edit-info" onclick="showForm()">Edit Menu</button>
 	</div>
 
 	<div id="incoming">
 	 <h2 style="font-size: 25px">Incoming Orders</h2>
-		<table class="striped">
+		<table class="striped centered">
 			<tr>
 				<th>Name</th>
 				<th>Contact</th>
 				<th>Time</th>
 				<th>Order Details</th>
 				<th>Toppings</th>
+				<th>Size</th>
 				<th>Price</th>
 				<th>Quantity</th>
 				<th>Total Amount</th>
@@ -46,6 +135,7 @@
 				<td>13:00</td>
 				<td>Wanton Mee</td>
 				<td>Non-spicy</td>
+				<td>Regular</td>
 				<td>$6</td>
 				<td>1</td>
 				<td>$6</td>
@@ -57,6 +147,7 @@
 				<td>13:15</td>
 				<td>Wanton Soup</td>
 				<td>Extra spring onions</td>
+				<td>Regular</td>
 				<td>$8</td>
 				<td>1</td>
 				<td>$8</td>
@@ -68,22 +159,24 @@
 				<td>13:50</td>
 				<td>Wanton Mee</td>
 				<td>Spicy</td>
-				<td>$6</td>
+				<td>Large</td>
+				<td>$8</td>
 				<td>12</td>
-				<td>$72</td>
+				<td>$96</td>
 			</tr>
 		</table>
 	</div>
 
 	<div id="resolved">
 	<h2 style="font-size: 25px">Resolved Orders</h2>
-		<table class="striped">
+		<table class="striped centered">
 			<tr>
 				<th>Name</th>
 				<th>Contact</th>
 				<th>Time</th>
 				<th>Order Details</th>
 				<th>Toppings</th>
+				<th>Size</th>
 				<th>Price</th>
 				<th>Quantity</th>
 				<th>Total Amount</th>
@@ -95,6 +188,7 @@
 				<td>10:00</td>
 				<td>Wanton Mee</td>
 				<td>Spicy</td>
+				<td>Regular</td>
 				<td>$6</td>
 				<td>3</td>
 				<td>$18</td>
@@ -106,9 +200,10 @@
 				<td>11:15</td>
 				<td>Wanton Soup</td>
 				<td>No spring onions</td>
-				<td>$8</td>
+				<td>Large</td>
+				<td>$10</td>
 				<td>1</td>
-				<td>$8</td>
+				<td>$10</td>
 			</tr>
 
 			<tr>
@@ -117,6 +212,7 @@
 				<td>11:30</td>
 				<td>Wanton Mee</td>
 				<td>Extra spicy</td>
+				<td>Regular</td>
 				<td>$6</td>
 				<td>1</td>
 				<td>$6</td>
@@ -128,6 +224,7 @@
 				<td>12:30</td>
 				<td>Wanton Soup</td>
 				<td>No toppings</td>
+				<td>Regular</td>
 				<td>$8</td>
 				<td>2</td>
 				<td>$16</td>
@@ -242,9 +339,17 @@
     </div> <!-- for row -->
 
 	</div> <!-- for menu class -->
+	</div>
+	<!-- 	========== ORDERS ===========    -->
+
+
 
 	</div>
 
-	<script src="../assets/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	<script src="./assets/script.js"></script>
+
+
 </body>
 </html>
