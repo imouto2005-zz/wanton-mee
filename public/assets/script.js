@@ -34,5 +34,30 @@
 
     $(document).ready(function() {
         $('select').material_select();
-      });
+
+        function makeRequest () {
+                $.get('https://desolate-peak-93885.herokuapp.com/api/update_orders', function(data) {
+                    var parsed = JSON.parse(data)
+                    $('#tbody').empty()
+                    // console.log(parsed.fatty['toppings'])
+                    Object.keys(parsed).forEach(function(key) {
+                        var tr = "<tr><td>" + key + "</td><td>" 
+                                    + parsed[key]['contact'] + "</td><td>" 
+                                    + parsed[key]['time'] + "</td><td>"
+                                    + parsed[key]['order_details'] + "</td><td>" 
+                                    + parsed[key]['toppings'] + "</td><td>"
+                                    + parsed[key]['size'] + "</td><td>"
+                                    + parsed[key]['price'] + "</td><td>"
+                                    + parsed[key]['quantity'] + "</td><td>"
+                                    + '$' + (parseInt(parsed[key]['price'].replace('$','')) * parseInt(parsed[key]['quantity'])) + '</td></tr>'
+                        console.log(tr)
+                        $('#tbody').append(tr)
+                    });
+                    // $('#incoming-table').append(newTbody)
+            })
+        }
+        
+        setInterval(makeRequest, 5000)
+
+    });
      
