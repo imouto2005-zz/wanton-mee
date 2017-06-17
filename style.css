@@ -1,0 +1,40 @@
+.body {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#incoming {
+	margin-top: 20px;
+}
+
+#resolved {
+	display: none;
+}
+
+#form {
+	margin-top: 20px;
+	display: none;
+}
+
+h1, h2 {
+	font-family: "Unica One";
+}
+
+.biz-details {
+	width: 300px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-top: 0;
+	margin-bottom: 20px;
+	padding-left: 10px;
+}
+
+#edit-info {
+	margin-left: 68%;
+}
+
+input {
+	width: 500px !important;
+}
+
