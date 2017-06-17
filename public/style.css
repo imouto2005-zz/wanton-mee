@@ -43,7 +43,7 @@ th {
 }
 
 #leaderboard {
-	width: 80%;
+	width: 90%;
 }
 
 #date {
@@ -51,14 +51,19 @@ th {
 }
 
 .total-earnings, .chart {
-	width: 80%;
+	width: 90%;
 	border: 1px solid black;
 	border-radius: 5px;
 	padding-left: 15px;
 }
 
 .chart {
-	margin-top: 10px;
+	margin-top: 20px;
+	width: 90%;
+}
+
+.input-field {
+	width: 500px;
 }
 
 .biz-details {
@@ -93,5 +98,7 @@ input {
 #edit-butan:hover {
 	color: #2979ff ;
 }
+
+
 
 
