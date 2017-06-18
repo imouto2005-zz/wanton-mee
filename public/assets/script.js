@@ -55,6 +55,6 @@
                 });
             })
         }
-        setInterval(makeRequest, 100000000)
+        setInterval(makeRequest, 3000)
     });
      
