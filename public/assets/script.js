@@ -53,11 +53,10 @@
                         console.log(tr)
                         $('#tbody').append(tr)
                     });
-                    // $('#incoming-table').append(newTbody)
             })
         }
         
-        setInterval(makeRequest, 5000)
+        setInterval(makeRequest, 3000)
 
     });
      
