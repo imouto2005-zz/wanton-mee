@@ -3,6 +3,14 @@
 	font-family: "Raleway";
 }
 
+#nav-header {
+	margin-left: 70px;
+	font-family: "Raleway" !important;
+	font-size: 40px !important;
+	margin-top: 10px;
+	position: absolute;
+}
+
 .body {
 	width: 90%;
 	margin: 0 auto;
